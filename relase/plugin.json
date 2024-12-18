@@ -1,0 +1,25 @@
+{
+  "main": "dist/index.html",
+  "logo": "logo.png",
+  "features": [
+    {
+      "code": "开始摸鱼",
+      "explain": "看二次元、美女、黑丝、白丝的图片和美女视频",
+      "cmds": [
+        "二次元",
+        "美女",
+        "黑丝",
+        "白丝",
+        "摸鱼",
+        "开始摸鱼",
+        "壁纸",
+        "图片",
+        "头像",
+        "美女视频"
+      ]
+    }
+  ],
+  "development": {
+    "main": "http://localhost:8001"
+  }
+}

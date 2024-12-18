@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "author": "wu.hao <wu.hao@tsingvast.com>",
+  "scripts": {
+    "dev": "UMI_ENV=dev umi dev",
+    "build": "UMI_ENV=prod umi build",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "UMI_ENV=dev npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@ant-design/pro-layout": "^7.8.1",
+    "antd": "^5.17.3",
+    "axios": "^1.3.3",
+    "coordtransform": "^2.1.2",
+    "umi": "^4.0.52"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@umijs/plugins": "^4.0.52",
+    "prettier": "^2.8.4",
+    "typescript": "^4.1.2"
+  }
+}
