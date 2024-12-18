@@ -1,12 +1,15 @@
 import { Tabs, Segmented} from "antd";
 import {
   PictureOutlined,
-  VideoCameraOutlined
+  VideoCameraOutlined,
+  MailOutlined
 } from "@ant-design/icons";
 import React, { useState } from "react";
 import VideoIndex from "./video/index";
 import ImgIndex from "@/pages/pic/index";
+import About from "@/pages/about";
 import "./index.less";
+
 
 
 export default function HomePage() {
@@ -23,6 +26,7 @@ export default function HomePage() {
           // '图片', '视频'
           { label: '图片', value: '图片', icon: <PictureOutlined /> },
           { label: '视频', value: '视频', icon: <VideoCameraOutlined /> },
+          { label: '关于我', value: '关于我', icon: <MailOutlined /> },
         ]}
         onChange={(value) => {
           console.log(value); // string
@@ -30,8 +34,17 @@ export default function HomePage() {
         }}
       />
 
+
       {
-        active === "图片" ? <ImgIndex /> : <VideoIndex />
+        active === "图片" ? <ImgIndex /> : <></>
+      }
+
+      {
+        active === "视频" ? <VideoIndex /> : <></>
+      }
+
+      {
+        active === "关于我" ? <About /> : <></>
       }
     </div>
   );
