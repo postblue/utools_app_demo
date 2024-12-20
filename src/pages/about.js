@@ -6,6 +6,10 @@ const {Title, Paragraph, Text, Link} = Typography;
 
 export default function About() {
 
+  const handleLink = () => {
+    window.utools.shellOpenExternal('https://github.com/postblue');
+  }
+
   return (
     <Typography className="about-layout">
       <Title level={3}>关于我</Title>
@@ -14,7 +18,7 @@ export default function About() {
       </Paragraph>
 
       <Paragraph>
-        插件源码：<Link href="https://github.com/postblue/utools_app_demo" target="_blank">
+        插件源码：<Link href="https://github.com/postblue/utools_app_demo" target="_blank" onClick={handleLink}>
         https://github.com/postblue/utools_app_demo
       </Link><Text type="secondary">  (复制链接到浏览器打开)</Text>
       </Paragraph>

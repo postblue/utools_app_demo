@@ -2,13 +2,15 @@ import { Tabs, Segmented} from "antd";
 import {
   PictureOutlined,
   VideoCameraOutlined,
-  MailOutlined
+  MailOutlined,
+  WeiboOutlined
 } from "@ant-design/icons";
 import React, { useState } from "react";
 import VideoIndex from "./video/index";
 import ImgIndex from "@/pages/pic/index";
 import About from "@/pages/about";
 import "./index.less";
+import HotNewsIndex from "@/pages/hotNews";
 
 
 
@@ -23,9 +25,9 @@ export default function HomePage() {
         block
         size="large"
         options={[
-          // '图片', '视频'
           { label: '图片', value: '图片', icon: <PictureOutlined /> },
           { label: '视频', value: '视频', icon: <VideoCameraOutlined /> },
+          { label: '热搜', value: '热搜', icon:  <WeiboOutlined /> },
           { label: '关于我', value: '关于我', icon: <MailOutlined /> },
         ]}
         onChange={(value) => {
@@ -41,6 +43,10 @@ export default function HomePage() {
 
       {
         active === "视频" ? <VideoIndex /> : <></>
+      }
+
+      {
+        active === "热搜" ? <HotNewsIndex /> : <></>
       }
 
       {
